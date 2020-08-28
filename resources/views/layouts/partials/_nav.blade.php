@@ -8,12 +8,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a style="margin-top:-6px;" class="navbar-brand" href="#"><img src="{{ asset('../image/logo_my_groupe.png')}}"></a>
+          <a style="margin-top:-6px;" class="navbar-brand" href="{{ route('pages.home')}}"><img src="{{ asset('../image/logo_my_groupe.png')}}"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li class="active"><a href="{{ route('pages.home')}}">Home</a></li>
+            <li><a href="{{ route('pages.about')}}">About</a></li>
             <li><a href="#contact">Artisans</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Planet <span class="caret"></span></a>
