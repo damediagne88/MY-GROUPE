@@ -4,7 +4,7 @@ if(! function_exists('page_title')){
 
     function page_title($title){
 
-        $base_title = "MyGroupe - List of artisans";
+        $base_title = config('app.name').'- List of artisans';
 
         if($title === ''){
 
