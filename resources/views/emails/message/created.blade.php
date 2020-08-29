@@ -2,11 +2,11 @@
 # Bonjour Monsieur DIAGNE 
 
 The body of your message.
-<p> {{ $name }} </p>
-<p> {{ $email}} </p>
+<p> {{ $msg->name }} </p>
+<p> {{ $msg->email}} </p>
 
 @component('mail::panel')
-{{ $msg }}
+{{ $msg->message }}
 @endcomponent
 
 
