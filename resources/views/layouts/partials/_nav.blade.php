@@ -25,7 +25,7 @@
                 <li><a href="https://larachat.co/">Larachat</a></li>
               </ul>
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="{{ set_active_route('contacts.create')}}"><a href="{{ route('contacts.create')}}">Contact</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
