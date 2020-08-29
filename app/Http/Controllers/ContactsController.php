@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\ContactMessages;
+use MercurySeries\Flashy\Flashy;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactRequest;
 
@@ -17,8 +18,9 @@ class ContactsController extends Controller
     public function store(ContactRequest $request){
 
         $mailable = new ContactMessages($request->name,$request->email,$request->message);
-        Mail::to('damediagnea@gmail.com')->send($mailable);
+        Mail::to(config('laracarte.admin_support_email'))->send($mailable);
 
-        return "Done";
+        Flashy::success('Votre message à bien été envoyer avec success');
+        return back();
     }
 }
