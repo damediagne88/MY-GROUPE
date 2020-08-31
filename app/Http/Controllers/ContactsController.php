@@ -18,11 +18,13 @@ class ContactsController extends Controller
 
     public function store(ContactRequest $request){
 
+        sleep(3);
+
         $message =Message::create($request->only('name','email','message'));
        
 
         $mailable = new ContactMessages($message);
-        Mail::to(config('laracarte.admin_support_email'))->send($mailable);
+        Mail::to(config('laracarte.admin_support_email'))->queue($mailable);
 
         Flashy::success('Votre message à bien été envoyer avec success');
         return back();

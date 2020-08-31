@@ -33,6 +33,7 @@ class ContactMessages extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.message.created');
+        return $this->from($this->msg->email,$this->msg->name)
+                     ->markdown('emails.message.created');
     }
 }
